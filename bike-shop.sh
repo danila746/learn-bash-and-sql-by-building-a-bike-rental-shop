@@ -25,11 +25,18 @@ RENT_MENU() {
 AVAILABLE_BIKES=$($PSQL "SELECT bike_id,type,size FROM bikes WHERE available=true ORDER BY bike_id;")
 echo "$AVAILABLE_BIKES"
 #if no bikes available
+
 if [[ -z $AVAILABLE_BIKES ]]
 then
 #send to main menu
   MAIN_MENU "Sorry, we don't have any bikes available right now."
+else 
+  #display available bikes
+  #ask for bike to rent
+  #if input is not a number
+  #send to main menu
 fi
+
 }
 
 RETURN_MENU() {
