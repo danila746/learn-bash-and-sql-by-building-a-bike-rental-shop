@@ -414,3 +414,6 @@ __vsc_original_prompt_command=${PROMPT_COMMAND:-}
 ./bike-shop.sh
 ./bike-shop.sh
 [[ a =~ [0-9] ]]
+[[ a =~ [0-9] ]]
+[[ a1 =~ [0-9] ]]
+[[ a1 =~ [0-9] ]]
