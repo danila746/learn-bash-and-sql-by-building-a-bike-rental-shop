@@ -418,3 +418,4 @@ __vsc_original_prompt_command=${PROMPT_COMMAND:-}
 [[ a1 =~ [0-9] ]]
 [[ a1 =~ [0-9] ]]
 [[ a1 =~ ^[0-9]$ ]]
+[[ 1 =~ ^[0-9]$ ]]
