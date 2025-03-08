@@ -638,3 +638,4 @@ echo "$(echo ' M e | sed 's/ //'')."
 echo "$(echo ' M e ').| sed 's/ //'"
 __vsc_prompt_cmd_original
 echo "$(echo ' M e '| sed 's/ //')."
+echo "$(echo ' M e '| sed 's/ //g')."
