@@ -711,3 +711,4 @@ echo "$(echo $CUSTOMER_NAME | sed -E 's/^ *| *$//g')."
 ./bike-shop.sh
 ./bike-shop.sh
 ./bike-shop.sh
+./bike-shop.sh
