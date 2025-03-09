@@ -103,6 +103,10 @@ CUSTOMER_ID=$($PSQL "SELECT customer_id FROM customers WHERE phone = '$PHONE_NUM
 if [[ -z $CUSTOMER_ID ]]
 then #send to main menu 
   MAIN_MENU "I could not find a record for that phone number." 
+else 
+  #get customer's rentals
+  #if no rentals
+  #send to main menu
 fi
 }
 
