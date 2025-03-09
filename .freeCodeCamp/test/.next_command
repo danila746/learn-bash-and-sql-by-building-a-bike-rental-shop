@@ -746,3 +746,6 @@ __vsc_original_prompt_command=${PROMPT_COMMAND:-}
 psql --username=freecodecamp --dbname=bikes
 ./bike-shop.sh
 ./bike-shop.sh
+git status
+git log
+git add .
