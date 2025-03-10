@@ -113,9 +113,10 @@ RETURN_MENU() {
 phone = '$PHONE_NUMBER' AND date_returned  IS NULL ORDER BY bike_id; ")
     echo "$CUSTOMER_RENTALS"
     # if no rentals
-
+    if [[ -z $CUSTOMER_RENTALS ]]
+    then 
     # send to main menu
-
+    fi
   fi
 }
 
