@@ -115,7 +115,8 @@ phone = '$PHONE_NUMBER' AND date_returned  IS NULL ORDER BY bike_id; ")
     # if no rentals
     if [[ -z $CUSTOMER_RENTALS ]]
     then 
-    # send to main menu
+      # send to main menu
+      MAIN_MENU "You do not have any bikes rented."
     fi
   fi
 }
