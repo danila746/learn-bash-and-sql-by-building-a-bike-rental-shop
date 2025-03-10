@@ -130,7 +130,8 @@ phone = '$PHONE_NUMBER' AND date_returned  IS NULL ORDER BY bike_id; ")
       #if not a number
       if [[ ! $BIKE_ID_TO_RETURN =~ ^[0-9]+$ ]]
       then
-        #send to main menu  
+        #send to main menu 
+        MAIN_MENU "That is not a valid bike number." 
       fi
     fi
   fi
