@@ -126,6 +126,7 @@ phone = '$PHONE_NUMBER' AND date_returned  IS NULL ORDER BY bike_id; ")
       done
       #ask for bike to return
       echo -e "\nWhich one would you like to return?"
+      read BIKE_ID_TO_RETURN
       #if not a number
       #send to main menu  
     fi
