@@ -117,6 +117,11 @@ phone = '$PHONE_NUMBER' AND date_returned  IS NULL ORDER BY bike_id; ")
     then 
       # send to main menu
       MAIN_MENU "You do not have any bikes rented."
+    else
+      #display rented bikes
+      #ask for bike to return
+      #if not a number
+      #send to main menu  
     fi
   fi
 }
