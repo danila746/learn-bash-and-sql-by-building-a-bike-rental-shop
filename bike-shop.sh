@@ -109,33 +109,37 @@ RETURN_MENU() {
     MAIN_MENU "I could not find a record for that phone number."
   else
     # get customer's rentals
-    CUSTOMER_RENTALS=$($PSQL "SELECT bike_id,type,size FROM bikes INNER JOIN rentals USING (bike_id) INNER JOIN customers USING (customer_id) WHERE
-phone = '$PHONE_NUMBER' AND date_returned  IS NULL ORDER BY bike_id; ")
-    
+    CUSTOMER_RENTALS=$($PSQL "SELECT bike_id, type, size FROM bikes INNER JOIN rentals USING(bike_id) INNER JOIN customers USING(customer_id) WHERE phone = '$PHONE_NUMBER' AND date_returned IS NULL ORDER BY bike_id")
+
     # if no rentals
-    if [[ -z $CUSTOMER_RENTALS ]]
-    then 
+    if [[ -z $CUSTOMER_RENTALS  ]]
+    then
       # send to main menu
       MAIN_MENU "You do not have any bikes rented."
     else
-      #display rented bikes
+      # display rented bikes
       echo -e "\nHere are your rentals:"
       echo "$CUSTOMER_RENTALS" | while read BIKE_ID BAR TYPE BAR SIZE
       do
         echo "$BIKE_ID) $SIZE\" $TYPE Bike"
       done
-      #ask for bike to return
+
+      # ask for bike to return
       echo -e "\nWhich one would you like to return?"
       read BIKE_ID_TO_RETURN
-      #if not a number
+
+      # if not a number
       if [[ ! $BIKE_ID_TO_RETURN =~ ^[0-9]+$ ]]
       then
-        #send to main menu 
-        MAIN_MENU "That is not a valid bike number." 
+        # send to main menu
+        MAIN_MENU "That is not a valid bike number."
       else
-        #check if input is rented
-        #if input not rented
-        #send to main menu
+        # check if input is rented
+
+        # if input not rented
+
+        # send to main menu
+
       fi
     fi
   fi
